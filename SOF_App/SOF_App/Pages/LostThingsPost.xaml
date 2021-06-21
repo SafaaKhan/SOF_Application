@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.LostThingsPost">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="LOGOUT" x:Name="TLBLogout" Clicked="TLBLogout_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="60,60,60,60">
+            <Label HorizontalTextAlignment="Center" Text="Post the Lost thing" FontSize="Medium" TextColor="Black" Margin="0,0,0,20"/>
+            <Label Text="The name of responsible" FontSize="Body" FontAttributes="Bold" TextColor="Orange"/>
+            <Entry  TextColor="Orange" x:Name="EntResponsibleName"/>
+            <Label Text="The information" FontSize="Body" FontAttributes="Bold" TextColor="Orange"/>
+            <Entry  TextColor="Orange" x:Name="EntInformation"/>
+           <!-- <Entry Placeholder="Date" TextColor="Orange" x:Name="EntDate"/>-->
+            
+            <Button x:Name="PublishBtn" Text="Publish" Clicked="PublishBtn_Clicked" BackgroundColor="Orange" TextColor="Gray" Margin="200,20,200,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

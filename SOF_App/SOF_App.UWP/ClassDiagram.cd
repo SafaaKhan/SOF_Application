@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SOF_App.Models.Department">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.FileHelper">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.FormModel">
+    <Position X="14.25" Y="0.5" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.LostThingsPostModel">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.NormalTransaction">
+    <Position X="10.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.PostEvent_N">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.RegisterMember">
+    <Position X="8.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.StudentReservedAppointment">
+    <Position X="8" Y="0.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.TimeSlot">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SOF_App.Models.TimeSlotDiv">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="SOF_App.Models.IPathService">
+    <Position X="2.5" Y="1.75" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

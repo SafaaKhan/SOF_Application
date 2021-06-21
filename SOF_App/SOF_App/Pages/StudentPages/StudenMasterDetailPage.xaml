@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.StudentPages.StudenMasterDetailPage"
+             xmlns:pages="clr-namespace:SOF_App.Pages.StudentPages"
+                  xmlns:pages1="clr-namespace:SOF_App.Pages">
+  <MasterDetailPage.Master>
+        <ContentPage Title="Master">
+            <StackLayout>
+                <Grid>
+                    <BoxView BackgroundColor="#384259" HeightRequest="150"/>
+                    <Label Text="Welcome to Student Section" TextColor="#7ac7c4" FontSize="Medium" Margin="15,75,0,0"/>
+
+
+                </Grid>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="newsIconIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Clubs Events and News" TextColor="#384259" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ClubsEventsandNewsTap" NumberOfTapsRequired="1" Tapped="ClubsEventsandNewsTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="LostFoundIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Lost Things" TextColor="#384259"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="LostThingsTap" NumberOfTapsRequired="1" Tapped="LostThingsTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="AppointmentIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Booking Appointment" TextColor="#384259" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="BookingAppointmentTap" NumberOfTapsRequired="1" Tapped="BookingAppointmentTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="transactionIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label x:Name="TransactionLbl" Text="Transaction" TextColor="#384259" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TransactionTap" NumberOfTapsRequired="1" Tapped="TransactionTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="appointmentIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label x:Name="BookedAppointmentsLbl" Text="The Booked Appointments" TextColor="#384259" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="BookedAppointmentsTap" NumberOfTapsRequired="1" Tapped="BookedAppointmentsTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="trackIcon1" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Appointment Tracking" TextColor="#384259" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="AppointmentTracingTap" NumberOfTapsRequired="1" Tapped="AppointmentTracingTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="trackIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Transaction Tracking" TextColor="#384259" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TransactionTracingTap" NumberOfTapsRequired="1" Tapped="TransactionTracingTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="logoutIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Logout" TextColor="#384259" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="LogoutTap" NumberOfTapsRequired="1" Tapped="Logout_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+                <pages:HomeStudent />
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

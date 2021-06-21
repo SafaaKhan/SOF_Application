@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.LostThingDetails">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <BoxView BackgroundColor="#ffffcc" AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></BoxView>
+            <Image x:Name="SofIcon" AbsoluteLayout.LayoutBounds="0.5,0.2,0.3,0.3" AbsoluteLayout.LayoutFlags="All" ></Image>
+            <Label Text="Security"  HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.45,0.3,0.2" AbsoluteLayout.LayoutFlags="All" FontAttributes="Bold" FontSize="18" TextColor="{StaticResource BlueColor}"/>
+            <Label x:Name="LablResponsibleName" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.5,0.3,0.2" AbsoluteLayout.LayoutFlags="All" FontAttributes="Bold" FontSize="16"/>
+            <StackLayout BackgroundColor="{StaticResource LightGray}" AbsoluteLayout.LayoutBounds="0,0.6,1,0.1" Padding="8,2,0,0" AbsoluteLayout.LayoutFlags="All">
+                <Label Text="Information" TextColor="#707070" FontAttributes="Bold"/>
+                <Label x:Name="LblInfo" TextColor="{StaticResource BlueColor}"/>
+            </StackLayout>
+
+           <StackLayout BackgroundColor="{StaticResource LightGray}" AbsoluteLayout.LayoutBounds="0,0.75,1,0.1" Padding="8,2,0,0" AbsoluteLayout.LayoutFlags="All">
+                <Label Text="Date" TextColor="#707070" FontAttributes="Bold"/>
+                <Label x:Name="LblDate" TextColor="{StaticResource BlueColor}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  AbsoluteLayout.LayoutBounds="0,0.9,1,0.1" Padding="8,2,0,0" AbsoluteLayout.LayoutFlags="All">
+                <Image HorizontalOptions="Center" x:Name="EmailIcon">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapEmail" NumberOfTapsRequired="1"  Tapped="TapEmail_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

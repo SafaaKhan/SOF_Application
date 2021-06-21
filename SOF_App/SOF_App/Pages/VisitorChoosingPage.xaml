@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.VisitorChoosingPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <Image x:Name="SofIcon"  Aspect="Fill" AbsoluteLayout.LayoutBounds="0,0,1,0.4" AbsoluteLayout.LayoutFlags="All" />
+            <Grid AbsoluteLayout.LayoutBounds="0,0.9,1,0.5" AbsoluteLayout.LayoutFlags="All" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Margin="50,55,0,0" VerticalOptions="Center">
+                    <Image x:Name="ClubsEventsNewsIcon"/>
+                    <Label Text="News and Events" TextColor="#4d4d4d" HorizontalTextAlignment="Center" FontSize="Micro"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ClubsEventsNewsTap" NumberOfTapsRequired="1" Tapped="ClubsEventsNewsTap_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="0" Grid.Column="2" Margin="0,50,0,0"  Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout VerticalOptions="Center">
+                        <Image x:Name="LostandFoundIcon"/>
+                        <Label Text="Find Lost Things" TextColor="#4d4d4d" HorizontalTextAlignment="Center" FontSize="Micro"/>
+                    </StackLayout>
+
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="LostandFoundTap" NumberOfTapsRequired="1" Tapped="LostandFoundTap_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                   
+                </StackLayout >
+
+                <Image Grid.Row="0" Grid.Column="1" x:Name="LineVIcon" Grid.RowSpan="3"/>
+                <Image Grid.Row="1" Grid.Column="0" x:Name="LineHIcon" Grid.ColumnSpan="3"/>
+              <!--  <StackLayout Grid.Row="2" Grid.Column="0" Margin="55,-30,0,0" VerticalOptions="Center">
+                    <Image x:Name="StudentIcon"/>
+                    <Label Text="New Student" TextColor="{StaticResource BlueColor}" HorizontalTextAlignment="Center" FontSize="Micro"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="NewStudentTap" NumberOfTapsRequired="1" Tapped="NewStudentTap_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="2" Margin="0,-30,40,0" VerticalOptions="Center">
+                    <Image x:Name="InfoIcon"/>
+                    <Label Text="Info" TextColor="{StaticResource BlueColor}" HorizontalTextAlignment="Center" FontSize="Micro"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="InfoTap" NumberOfTapsRequired="1" Tapped="InfoTap_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>-->
+
+            </Grid>
+
+
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>

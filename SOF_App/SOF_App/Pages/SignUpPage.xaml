@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.SignUpPage">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+          
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView>
+            <StackLayout Grid.Row="0" Margin="40,10,40,0">
+            <Label TextColor="{StaticResource BlueColor}"  Text="Enter your university ID: " />
+            <Entry Placeholder="University ID" TextColor="#0066ff" x:Name="EntID" PlaceholderColor="#707070"/>
+            <Label TextColor="{StaticResource BlueColor}"  Text="Enter your name: " />
+            <Entry Placeholder="Name" TextColor="#0066ff" x:Name="EntName" PlaceholderColor="#707070"/>
+            <Label TextColor="{StaticResource BlueColor}"  Text="Enter your email: " />
+            <Entry Placeholder="Email" TextColor="#0066ff" x:Name="EntEmail" PlaceholderColor="#707070"/>
+           
+            <Label x:Name="LRuleP" Text="Passwords must have at least one non letter, one digit character, at least one lowercase ('a'-'z'), at least one uppercase ('A'-'Z'),and must be at least 6 characters long.(Valid special characters are – @#$%^&amp;+=)" TextColor="Red" />
+            <Label TextColor="{StaticResource BlueColor}"  Text="Enter your password: " />
+            <Entry Placeholder="Password" TextColor="#0066ff" x:Name="EntPassword" PlaceholderColor="#707070" IsPassword="True"/>
+            <Label TextColor="{StaticResource BlueColor}"  Text="Confirm the entered password:  " />
+            <Entry Placeholder="Confirm Password" TextColor="#0066ff" x:Name="EntConfirmPassword" PlaceholderColor="#707070" IsPassword="True"/>
+            <Picker Title="Choose your Services" TextColor="{StaticResource BlueColor}" x:Name="ServicesPicker" SelectedIndexChanged="ServicesPicker_SelectedIndexChanged" IsVisible="False">
+                <Picker.Items>
+                  <!--  <x:String>Academic Guidance</x:String>-->
+                    <x:String>Booking Book</x:String>
+                    <x:String>Finance</x:String>
+                    <x:String>Student Affairs</x:String>
+                    <x:String>Admission and registration</x:String>
+                    <x:String>Other</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="serLbl" Text="Write your serivece: " FontSize="14" IsEnabled="False" IsVisible="False"/>
+            <Entry x:Name="serEnt" IsVisible="False" IsEnabled="False"/>
+            <Picker IsEnabled="False" Title="Choose your Department" TitleColor="{StaticResource BlueColor}" TextColor="{StaticResource BlueColor}" x:Name="DepartmentPicker" SelectedIndexChanged="DepartmentPicker_SelectedIndexChanged" IsVisible="False" ItemsSource="{Binding Department}" >
+                
+            </Picker>
+            <Button Margin="50,15,50,10 " x:Name="BtnSignUp" Text="SIGN UP" Clicked="BtnSignUp_Clicked"/>
+        </StackLayout>
+        </ScrollView>
+    </Grid>
+   
+</ContentPage>

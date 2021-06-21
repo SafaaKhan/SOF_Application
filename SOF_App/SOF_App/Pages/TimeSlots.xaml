@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             xmlns:local="clr-namespace:SOF_App.Pages"
+             xmlns:local1="clr-namespace:SOF_App.Models"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.TimeSlots">
+
+    <ContentPage.BindingContext>
+        <local1:TimeSlotDiv/>
+    </ContentPage.BindingContext>
+    
+    
+        <StackLayout Margin="5" BackgroundColor="#E5E7E9">
+            <Label Text="Choose the date: " TextColor="{StaticResource BlueColor}" FontAttributes="Bold" FontSize="Medium"/>
+
+        <syncfusion:SfCalendar x:Name="calendar" HeightRequest="250" OnMonthCellLoaded="calendar_OnMonthCellLoaded" OnCalendarTapped="calendar_OnCalendarTapped" BlackoutDatesViewMode="Strikethrough"  >
+            <syncfusion:SfCalendar.MonthViewSettings>
+                <syncfusion:MonthViewSettings  SelectionShape="Circle" 
+                              WeekEndBackgroundColor="Coral">
+                   
+                </syncfusion:MonthViewSettings>
+            </syncfusion:SfCalendar.MonthViewSettings>
+        </syncfusion:SfCalendar>
+        <StackLayout Orientation="Horizontal" >
+            <Label  Text="Message from the staff: "  FontSize="16" x:Name="msg_Label"  TextColor="{StaticResource BlueColor}" FontAttributes="Bold" IsVisible="False"/>
+            <Label    TextColor="Black" FontSize="16" x:Name="msgLabel" BackgroundColor="#FFF3F0F0" IsVisible="False"/>
+
+        </StackLayout>
+
+        <!-- <DatePicker Format="d" x:Name="DateP"  ></DatePicker>-->
+        <StackLayout Orientation="Horizontal" >
+            <Label  Text="Role Number"  FontSize="16" x:Name="timeSlotLabel"  TextColor="{StaticResource BlueColor}" FontAttributes="Bold"/>
+            <Label  Text="Time"  TextColor="Black" FontSize="16" x:Name="roleNumberLabel" BackgroundColor="#E4E1E1" FontAttributes="Bold">
+			
+            </Label>
+
+        </StackLayout>
+        <ListView Margin="5" x:Name="LVTimeslot" IsTabStop="True" HasUnevenRows="True" ItemSelected="LVLostThings_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                  
+                                </Grid.RowDefinitions>
+                            <StackLayout Orientation="Horizontal" Grid.Row="0">
+                                <Label  Text="{Binding roleNumber}"  FontSize="16" x:Name="roleNumberLabel" TextColor="{StaticResource BlueColor}" />
+                                <Label  Text="{Binding time}"  TextColor="Black" FontSize="16" x:Name="timeSlotLabel"  BackgroundColor="Gray"/>
+                                
+                            </StackLayout>
+
+                               
+                                <Label Grid.Row="1" Text="{Binding availability}" TextColor="#737373" FontSize="14" />
+
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="BookBtn" Text="Book the appointment" Clicked="BookBtn_Clicked" Margin="0,5,0,20"/>
+        </StackLayout>
+        
+   
+</ContentPage>

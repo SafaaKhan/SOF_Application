@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.FormInquiry">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#ECF3FB">
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10" Spacing="20" BackgroundColor="#ECF3FB">
+                <Label Text="Enter request number here" TextColor="DarkBlue"/>
+                <Entry x:Name="FormID" HorizontalOptions="FillAndExpand"/>
+                <Button Margin="20" x:Name="btnSubmit" Text="Submit" 
+                      BackgroundColor="#ffffcc" TextColor="DarkBlue" Clicked="btnSubmit_Clicked" HorizontalOptions="FillAndExpand"/>
+                <Label x:Name="StatusLabel"  TextColor="White" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.StudentPages.StudentAppointmentTracking">
+    <ContentPage.Content>
+        <ScrollView Orientation="Both">
+            <Grid Margin="1" Padding="4" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Vertical" Grid.Row="0" Margin="1,1,1,20"  HeightRequest="30">
+                    <StackLayout Orientation="Horizontal" Spacing="2" >
+                        <Label Text="The staff name: " TextColor="#393e46" FontAttributes="Bold" FontSize="16"/>
+                        <Label x:Name="staffName" TextColor="#00adb5" FontSize="16"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Date: " TextColor="#393e46" FontAttributes="Bold" FontSize="16"/>
+                            <Label x:Name="DateLbl" TextColor="#00adb5" FontSize="16"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Day: " TextColor="#393e46" FontAttributes="Bold" FontSize="16"/>
+                            <Label x:Name="DayLbl" TextColor="#00adb5" FontSize="16"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout d:Spacing="15" Orientation="Horizontal" Grid.Row="1" Margin="30,10,70,15" Spacing="50" HeightRequest="200">
+                    <!-- <StackLayout Orientation="Vertical">
+                    <Label Text="Service: " TextColor="#393e46" FontAttributes="Bold" FontSize="12"/>
+                    <Picker>
+                        
+                    </Picker>
+                </StackLayout>-->
+                    <Frame BackgroundColor="#00adb5"  Padding="15" HorizontalOptions="Center" WidthRequest="200" HeightRequest="200" CornerRadius="20" Margin="30,30,1,1">
+                        <Label WidthRequest="40" x:Name="status" HorizontalTextAlignment="Center" FontAttributes="Bold" ></Label>
+                    </Frame>
+
+
+                </StackLayout>
+               
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

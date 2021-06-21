@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.InfoPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="20">
+            <Label Text="Welcome in SOF Application" HorizontalOptions="Center" FontSize="Header" TextColor="{StaticResource StudentBarColor}"/>
+            <Label Text="
+                   About" FontAttributes="Italic" FontSize="18" TextColor="{StaticResource GoldColor}"/>
+            <Label TextColor="{StaticResource BlueColor}" Text="
+                   Services Organizer and Facilitator (SOF): is an application works on different platforms. It privides many services for the university members, such as booking appointment, getting some transactions as well as tracking the transaction status.In addition, it allows new student to apply in the univerity and compelete most of the registration process. Finally, university news and lost things can be views by it." FontSize="16"/>
+            <Label Text="
+                   About the programmer" FontAttributes="Italic" FontSize="18" TextColor="{StaticResource GoldColor}"/>
+            <Label FontSize="16" TextColor="{StaticResource BlueColor}" Text="
+                   Safaa Khan: a senior student in Information Technology (ITC) at the Arab Open University. I am interested in the programming field; I tend to the religious side and I want to use technology to serve our religion. I like working as a team and I see in myself the ability in leadership. The application and website is implemented by me with helping from Yamam Fayiz in the applicatopn."/>
+                <Label TextColor="{StaticResource GoldColor}" Text="Follow The Arab Open University Accounts"  FontSize="Large" HorizontalOptions="Center"  />
+            <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center" >
+                <Image x:Name="facebook">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapFaceBook" NumberOfTapsRequired="1" Tapped="TapFaceBook_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image  x:Name="instagram">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Tapinstagram" NumberOfTapsRequired="1" Tapped="Tapinstagram_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image  x:Name="twitter">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Taptwitter" NumberOfTapsRequired="1" Tapped="Taptwitter_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

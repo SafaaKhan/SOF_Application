@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Local="clr-namespace:SOF_App.Models"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.DoneAppointmentListStaff">
+    <ContentPage.BindingContext>
+        <Local:StudentReservedAppointment/>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <!-- <Label Text="Appointment Checking" TextColor="{StaticResource GoldColor}" FontAttributes="Bold" HorizontalOptions="Center" />-->
+            <!--ItemSelected="StudentInfoThings_ItemSelected" ItemTapped="StudentInfoThings_ItemTapped"-->
+            <StackLayout BackgroundColor="#444444" x:Name="DeleteBar" Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="10000" Margin="0,0,0,0">
+                <Image x:Name="DeleteIcon" HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" WidthRequest="50"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="DeleteTap" NumberOfTapsRequired="1" Tapped="DeleteTap_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <ListView Margin="5" ItemTapped="StudentInfoThings_ItemTapped" x:Name="StudentInfoThings" HasUnevenRows="True"  BackgroundColor="#eeeeee" ItemSelected="StudentInfoThings_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid x:Name="GridL" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Orientation="Horizontal" Grid.Row="0">
+                                    <Label  Text="The appointment time: " TextColor="#444444" FontSize="16" FontAttributes="Bold" />
+                                    <Label  Text="{Binding Time }" TextColor="#777777" FontSize="16" />
+                                </StackLayout>
+
+
+                                <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                    <Label  Text="The appointment date: " TextColor="#444444" FontSize="16" FontAttributes="Bold"/>
+                                    <Label  Text="{Binding Date }" TextColor="#777777" FontSize="14" />
+
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                    <Label  Text="The service: " TextColor="#444444" FontSize="16" FontAttributes="Bold"/>
+                                    <Label  Text="{Binding serviceName }" TextColor="#777777" FontSize="14" />
+
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Grid.Row="3">
+                                    <Label  Text="The student ID: " TextColor="#444444" FontSize="16" FontAttributes="Bold"/>
+                                    <Label  Text="{Binding studentID }" TextColor="#777777" FontSize="14" />
+
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Grid.Row="4">
+                                    <Label  Text="The student role number: " TextColor="#444444" FontSize="16" FontAttributes="Bold"/>
+                                    <Label  Text="{Binding roleNumber }" TextColor="#777777" FontSize="14" />
+
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Grid.Row="5">
+                                    <Label  Text="Notice: " TextColor="#444444" FontSize="16" FontAttributes="Bold"/>
+                                    <Label  Text="{Binding isDoneby }" TextColor="#777777" FontSize="14" />
+
+                                </StackLayout>
+                                <StackLayout Padding="0" Spacing="5"  Grid.Row="6" Orientation="Horizontal" Margin="0,30,0,0"  IsVisible="{Binding isVisibale}">
+                                    <Button x:Name="detailsBtn" Text="Details"
+                                    BackgroundColor="DarkGreen"
+                                    TextColor="White" 
+                                          WidthRequest="70"
+                                        Clicked="detailsBtn_Clicked"
+                                    FontSize="Micro"  Margin="0"/>
+                                    </StackLayout>
+                               
+                                <StackLayout BackgroundColor="#444444" x:Name="CustomToolBarItem" Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="10000" Margin="0,0,0,4" Grid.Row="7">
+                                    <Label  Text="             " TextColor="#444444" FontSize="8" FontAttributes="Bold"/>
+                                   
+                                </StackLayout>
+                                
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout BackgroundColor="#444444" x:Name="CustomToolBarItem" Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="10000" Margin="0,0,0,4">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="The number of the waiting appointments: " x:Name="TextwaitingLbl" HorizontalOptions="End" VerticalOptions="Center" TextColor="#777777"/>
+                    <Label  x:Name="waitingLbl" HorizontalOptions="End" VerticalOptions="Center" TextColor="#777777"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="The number of the Done appointments: " x:Name="TextDoneLbl" HorizontalOptions="End" VerticalOptions="Center" TextColor="#777777"/>
+                    <Label  x:Name="DoneLbl" HorizontalOptions="End" VerticalOptions="Center" TextColor="#777777"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="The number of the cancelled appointments: " x:Name="TextcancelledLbl" HorizontalOptions="End" VerticalOptions="Center" TextColor="#777777"/>
+                    <Label  x:Name="cancelledLbl" HorizontalOptions="End" VerticalOptions="Center" TextColor="#777777"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

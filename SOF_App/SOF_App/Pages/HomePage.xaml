@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.HomePage">
+   
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <BoxView BackgroundColor="#ffffcc" AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></BoxView>
+            <Image x:Name="SofIcon" AbsoluteLayout.LayoutBounds="0.5,0.2,0.3,0.3" AbsoluteLayout.LayoutFlags="All" ></Image>
+           
+
+            <StackLayout  AbsoluteLayout.LayoutBounds="0,0.6,1,0.1" Padding="8,2,0,0" AbsoluteLayout.LayoutFlags="All" HeightRequest="50">
+                
+                <Label x:Name="LblInfo" TextType="Text" HorizontalOptions="Center" VerticalOptions="Center"  Text="WELCOME TO THE STAFF SECTION" TextColor="{StaticResource BlueColor}" FontSize="Large" />
+            </StackLayout>
+
+
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

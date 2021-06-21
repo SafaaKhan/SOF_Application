@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.SignInPage">
+
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="ic_launcher.png" Aspect="AspectFit" x:Name="SofIcon" Grid.Row="0" HeightRequest="200" WidthRequest="200" Margin="0,40,0,0"></Image>
+        <StackLayout Orientation="Vertical" Grid.Row="1" Margin="50,20,50,20">
+            <Label TextColor="{StaticResource BlueColor}"  Text="Enter your ID: " />
+            <Entry TextColor="#0066ff" Placeholder="ID" PlaceholderColor="#707070" x:Name="EntID"/>
+
+            <Label TextColor="{StaticResource BlueColor}"  Text="Enter your password: " />
+            <Entry  TextColor="#0066ff" Placeholder="Password" PlaceholderColor="#707070" x:Name="EntPassword" IsPassword="True"/>
+            <Button Text="Login" x:Name="BtnLogin" Clicked="BtnLogin_Clicked" Margin="100,20,100,60"/>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Grid.Row="2" Padding="20" HorizontalOptions="Center">
+            <Label Text="Do not have an account?"/>
+            <StackLayout Spacing="0" >
+                <Label Text="Sign Up" FontAttributes="Bold"/>
+                <BoxView BackgroundColor="Black" HeightRequest="1"/>
+                <StackLayout.GestureRecognizers >
+                    <TapGestureRecognizer x:Name="TapSignUp" Tapped="TapSignUp_Tapped" NumberOfTapsRequired="1"/>
+
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+        </StackLayout>
+  
+
+    </Grid>
+</ContentPage>

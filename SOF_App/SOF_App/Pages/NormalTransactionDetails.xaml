@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.NormalTransactionDetails">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout BackgroundColor="#ECF3FB">
+
+                <StackLayout IsVisible="False" x:Name="DetailsstkContinuing" Margin="5,5,5,5">
+                    <Label Text="Continuing Student" TextColor="DarkBlue" FontSize="Title" Margin="5,5,5,5" x:Name="DetailslbContinuing"/>
+                    <Label Text="Enter ID" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry InputTransparent="True" Placeholder=" write your ID" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="DetailsEntIdC"/>
+                    <Label Text="Enter Email" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your Email" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="DetailsEntEmailC"/>
+                    <Label Text="Name" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry InputTransparent="True" Placeholder=" write your name " PlaceholderColor="Default" Margin="5,5,70,5" x:Name="DetailsEntNameC"/>
+                    <Label Text="Your Major" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry InputTransparent="True" Placeholder=" write your major " PlaceholderColor="Default" Margin="5,5,70,5" x:Name="DetailsMajorC" />
+                    <Picker InputTransparent="True" x:Name="DetailsEntContinuingSt" Title="ContinuingStudent" TitleColor="Default"
+                          SelectedIndexChanged="CotinueOnPickerSelectedIndexChanged" FontSize="14" Margin="5,5,60,5" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Student Card( Instead of lose)</x:String>
+                                <x:String>Proof of student</x:String>
+                                <x:String>Other TransAction</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <StackLayout x:Name="DetailsstkOtherC" IsVisible="False">
+                        <Label Text="Type your Request here:"/>
+                        <Entry InputTransparent="True" Placeholder=" " PlaceholderColor="Default" Margin="5,5,60,5" x:Name="DetailsEntcontinuosTransaction"/>
+                    </StackLayout>
+                    <!--here dialog box-->
+                    <Label Text="*you must first pay for the required service through your SIS and attach a copy of the payment receipt" TextColor="Red" FontSize="12"/>
+                    <!--here photo-->
+                    <!--<Button x:Name="DetailsSend" BackgroundColor="#ffffcc"  Text="Send" IsEnabled="False" Clicked="Send_Clicked" Margin="70,50,70,70"/>-->
+                </StackLayout>
+
+                <StackLayout IsVisible="False" x:Name="DetailsstkGraduate" Margin="5,5,5,5">
+
+                    <Label Text="Graduate Student" TextColor="DarkBlue" FontSize="Title" Margin="5,5,5,5" x:Name="DetailslbGraduate"/>
+                    <Label Text="Enter ID" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry InputTransparent="True" Placeholder=" write your ID" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="DetailsEntIdG"/>
+                    <Label Text="Enter Email" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry InputTransparent="True" Placeholder=" write your Email" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="DetailsEntEmailG"/>
+                    <Label Text="Name" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry InputTransparent="True" Placeholder=" write your name " PlaceholderColor="Default" Margin="5,5,70,5" x:Name="DetailsEntNameG" />
+                    <Picker InputTransparent="True" x:Name="DetailsEntGraduateSt" Title="GraduateStudent" TitleColor="Default"
+                         SelectedIndexChanged="GraduateOnPickerSelectedIndexChanged" FontSize="14" Margin="5,5,60,5" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Recommendation</x:String>
+                                <x:String>Proof of Graduate</x:String>
+                                <x:String>Other TransAction</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <StackLayout x:Name="DetailsstkOtherG" IsVisible="False">
+                        <Label Text="Type your Request here:"/>
+                        <Entry InputTransparent="True" Placeholder=" " PlaceholderColor="Default" Margin="5,5,60,5" x:Name="DetailsEntGraduateTransaction"/>
+                    </StackLayout>
+                    <!--here dialog box-->
+                    <Label Text="*you must first pay for the required service through your SIS and attach a copy of the payment receipt" TextColor="Red" FontSize="12"/>
+                    <!--here photo-->
+                    <!--<Button x:Name="DetailsbtnTakefile" Margin="60,5,60,5"   Text="Select File" Clicked="btnSelectFile_Clicked" BackgroundColor="#ffffcc" TextColor="DarkBlue" />-->
+
+                    <!--<Label x:Name="DetailsFileName"
+                                 FontSize="Subtitle" TextColor="Blue" Margin="5,5,5,5"/>
+                    <Button x:Name="DetailsbtnSend" BackgroundColor="Yellow"  Text="Send" IsEnabled="False" Clicked="Send_Clicked_1" Margin="70,50,70,70"/>-->
+                </StackLayout>
+                <Button Text="Open File" BackgroundColor="#ffffcc" TextColor="DarkBlue" Clicked="Button_Clicked" Margin="70,5,70,5"/>
+                <StackLayout    Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="10">
+                    <Button Text="Accept" ClassId="1" BackgroundColor="Green" TextColor="White" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>
+                    <Button Text="Deny" ClassId="2" BackgroundColor="Red" TextColor="White" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_1"/>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

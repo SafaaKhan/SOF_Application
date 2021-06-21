@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.AdmissionRulesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Admission requirements:"  FontAttributes="Bold"/>
+            <Label Text="General admission conditions in the Arab Open University in Saudi Arabia, the applicant must fulfil the following conditions:
+1. The applicant obtained a high school diploma issued by the Saudi Ministry of Education or its equivalent from other countries, provided that they are documented by the relevant authorities.
+2. Performing the achievement test and the ability test approved by the 'National Center for Measurement'.
+3.That the high school diploma is a 'scientific track' for admission to the College of Computer Studies."/>
+            
+            <Label Text="Admission and Registration Requirements:"/>
+
+            <Label Text="1-The original secondary school certificate or its equivalent, or a stamped copy with a live stamp (original) from the school and a clear copy thereof, and the following cases are observed:
+                    2-If the secondary certificate is issued by an Arab country, it must be documented by the State's Ministry of Foreign Affairs and by the Saudi cultural attaché in that country
+                    3-If the secondary certificate is issued by a non-Arab country, it must be documented by the State Ministry of Foreign Affairs and the Saudi Cultural Attaché in that country, then obtain a request for equivalence with a Saudi secondary certificate from the Saudi Ministry of Education or its departments in the regions
+                    4-The secondary certificate issued by international foreign schools in the Kingdom of Saudi Arabia must be attested by the Department of Foreign and Private Education in the Education Department or the Ministry
+                     5-Authentication from the tests and admission department of the education department or the ministry
+                    6-Original passport + a copy of it
+                    7-Proof of identification + a copy of it (status or residence card), provided that the student's residence is valid and no exceptions are accepted
+                    8-recent personal photos, 6 x 4   "/>   
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

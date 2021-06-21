@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.DisablePage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Choose the date/s you want to disable it/them (for holidays as instance)" TextColor="{StaticResource BlueColor}" FontSize="Medium"/>
+            <syncfusion:SfCalendar HeightRequest="250" x:Name="calendar" SelectionMode="RangeSelection" SelectionChanged="calendar_SelectionChanged" OnMonthCellLoaded="calendar_OnMonthCellLoaded_1"/>
+            <Label Text="Insert a message for the student: " TextColor="{StaticResource BlueColor}" FontSize="Medium"/>
+            <Entry  x:Name="msgEnt"/>
+            <Button Margin="50,20"
+                    Text="Done" x:Name="DoneBtn" Clicked="DoneBtn_Clicked"/>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

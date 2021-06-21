@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.InsertWorkinghoursPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+           <!-- <Image  Grid.Row="0" Aspect="AspectFit" HeightRequest="100" WidthRequest="150" Margin="0,3,0,0" x:Name="SofIcon"/>-->
+            <ScrollView>
+            <StackLayout Grid.Row="1" Margin="40,30,40,10">
+                
+                <!--Review, add info-->
+                <Label Text="Insert the time in a whole form(1) not {(1:30) or (1:00)} nor adding AM or PM" FontAttributes="Bold" TextColor="Red"/>
+                <Label Text="write the time as 24h(4 PM=16)" FontAttributes="Bold" TextColor="Red"/>
+                    <Label Text="The written format should be as: 16 (For example)" FontAttributes="Bold" TextColor="Blue"/>
+                    <Entry Placeholder="Start Time (start time of working hour)" TextColor="#0066ff" x:Name="EntStartTime" PlaceholderColor="#707070"/>
+                <Label Text="write the time as 24h(4PM=16)" FontAttributes="Bold" TextColor="Red"/>
+                    <Label Text="The written format should be as: 16 (For example)" FontAttributes="Bold" TextColor="Blue"/>
+                    <Entry Placeholder="End Time (end time of working hour)" TextColor="#0066ff" x:Name="EntEndTime" PlaceholderColor="#707070"/>
+                    <Label Text="write the time as whole number whithout any suffix to the number" FontAttributes="Bold" TextColor="Red"/>
+                <Entry Placeholder="each Time slot? (for example, 10 minutes for a student {Write only 10})" TextColor="#0066ff" x:Name="EntTimeSlot" PlaceholderColor="#707070"/>
+                <Picker   Title="Choose the Service" TextColor="{StaticResource BlueColor}" x:Name="ServicePicker" SelectedIndexChanged="ServicePicker_SelectedIndexChanged" IsVisible="False">
+                    <Picker.Items>
+                        <x:String>Academic Guidance</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+               
+                <Label x:Name="serLbl" Text="Write the serivece: " FontSize="14"  IsVisible="False"/>
+                <Entry x:Name="serEnt" IsVisible="False" />
+                    <Label x:Name="_1Lbl" Text="Insert the time in a whole form(1) not {(1:30) or (1:00)} nor adding AM or PM" IsVisible="False" FontAttributes="Bold" TextColor="Red"/>
+                <Label x:Name="_2Lbl" Text="Write the time as 24h(4 PM=16)" FontAttributes="Bold" TextColor="Red" IsVisible="False"/>
+                <Label  x:Name="_3Lbl" Text="Enter the start time of your break" FontAttributes="Bold" TextColor="Red" IsVisible="False"/>
+                    <Label x:Name="Exp1" Text="The written format should be as: 16 (For example)" FontAttributes="Bold" TextColor="Blue" IsVisible="False"/>
+                    <Entry x:Name="_4Lbl" Placeholder="Start Time (start time of break)" TextColor="#0066ff" IsVisible="False"  PlaceholderColor="#707070"/>
+                
+                <Label x:Name="_5Lbl" Text="write the time as 24h(4PM=16)" FontAttributes="Bold" IsVisible="False" TextColor="Red"/>
+                    <Label  x:Name="_7Lbl" Text="Enter the end time of your break" FontAttributes="Bold" TextColor="Red" IsVisible="False"/>
+                    <Label x:Name="Exp2" Text="The written format should be as: 16 (For example)" FontAttributes="Bold" TextColor="Blue" IsVisible="False"/>
+                    <Entry x:Name="_6Lbl" Placeholder="End Time (end time of break)" TextColor="#0066ff" IsVisible="False"  PlaceholderColor="#707070"/>
+                <!--  <Label Text=" The number of student you can have:" />-->
+                <Label x:Name="noTimeSlot" />
+                <Button x:Name="BtnInsert" Margin="20,20,20,20" Text="Insert" Clicked="BtnInsert_Clicked"/>
+            </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

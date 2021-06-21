@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <Color x:Key="BlueColor">#0066ff</Color>
+            <Color x:Key="GoldColor">#ffd700</Color>
+            <Color x:Key="LighterGoldcolor">#ffe44d</Color>
+            <Color x:Key="LightGray">#f5f5f5</Color>
+            <Color x:Key="StudentBarColor">#384259</Color>
+            <Color x:Key="StudentTextBarColor">#7ac7c4</Color>
+            <Color x:Key="StudentBackgroundColor">#EFFBFB</Color>
+            <Color x:Key="StudentDarkYellowColor">#feb72b</Color>
+            <Color x:Key="StudentYellowColor">#ffe75e</Color>
+
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource GoldColor}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="{StaticResource BlueColor}"/>
+                <Setter Property="Margin" Value="200,20,200,0"/>
+               
+
+            </Style >
+
+            <Style TargetType="NavigationPage" >
+                <!--  Value="{StaticResource LighterGoldcolor}" -->
+               <Setter Property="BarBackgroundColor"    Value="{StaticResource StudentBarColor}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource StudentTextBarColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

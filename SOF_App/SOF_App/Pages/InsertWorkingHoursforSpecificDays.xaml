@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.InsertWorkingHoursforSpecificDays">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+           <!-- <Image  Grid.Row="0" Aspect="AspectFit" HeightRequest="100" WidthRequest="150" Margin="0,3,0,0" x:Name="SofIcon"/>-->
+            <StackLayout Grid.Row="1" Margin="40,0,40,10">
+
+                <!--Review, add info-->
+                <Picker Title="Choose the day: " TextColor="{StaticResource BlueColor}" x:Name="DayPicker" SelectedIndexChanged="DayPicker_SelectedIndexChanged" >
+                    <Picker.Items>
+                        <x:String>Sunday</x:String>
+                        <x:String>Monday</x:String>
+                        <x:String>Tuesday</x:String>
+                        <x:String>Wednesday</x:String>
+                        <x:String>Thursday</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Insert the time in a whole form(1) not {(1:30) or (1:00)}" FontAttributes="Bold" TextColor="Red"/>
+                <Label Text="write the time as 24h(4 PM=16)" FontAttributes="Bold" TextColor="Red"/>
+                <Entry Placeholder="Start Time (start time of working our)" TextColor="#0066ff" x:Name="EntStartTime" PlaceholderColor="#707070"/>
+                <Label Text="write the time as 24h(4PM=16)" FontAttributes="Bold" TextColor="Red"/>
+                <Entry Placeholder="End Time (end time of working our)" TextColor="#0066ff" x:Name="EntEndTime" PlaceholderColor="#707070"/>
+                <Label Text="write the time as whole number" FontAttributes="Bold" TextColor="Red"/>
+                <Entry Placeholder="each Time slot? (for example, 10 minutes for a student {Write only 10})" TextColor="#0066ff" x:Name="EntTimeSlot" PlaceholderColor="#707070"/>
+                <Picker Title="Choose the Service" TextColor="{StaticResource BlueColor}" x:Name="ServicePicker" SelectedIndexChanged="ServicePicker_SelectedIndexChanged" IsVisible="False">
+                    <Picker.Items>
+                        <x:String>Academic Guidance</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label x:Name="serLbl" Text="Write the serivece: " FontSize="14"  IsVisible="False"/>
+                <Entry x:Name="serEnt" IsVisible="False" />
+                <!--  <Label Text=" The number of student you can have:" />-->
+                <Label x:Name="noTimeSlot" />
+                <Button x:Name="BtnInsert" Text="Insert" Clicked="BtnInsert_Clicked" Margin="20"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

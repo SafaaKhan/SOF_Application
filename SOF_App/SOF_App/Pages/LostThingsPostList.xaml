@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.LostThingsPostList">
+    <ContentPage.Content>
+        <ListView Margin="5" x:Name="LVLostThings" HasUnevenRows="True" ItemSelected="LVLostThings_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Text="{Binding ResponsibleName }" TextColor="Black" FontSize="16" />
+                            <Label Grid.Row="3" Text="{Binding Information}" TextColor="Orange" FontSize="14"></Label>
+                            <Label Grid.Row="1" Text="{Binding Date }" TextColor="#737373" FontSize="14" />
+                            <StackLayout BackgroundColor="Orange" x:Name="CustomToolBarItem" Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="10000" Margin="0,0,0,4" Grid.Row="5">
+                                <Label  Text="             " TextColor="Orange" FontSize="8" FontAttributes="Bold"/>
+
+                            </StackLayout>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+</ContentPage>

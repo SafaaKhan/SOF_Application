@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.DaysOfWorking">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <BoxView BackgroundColor="#ffffcc" AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></BoxView>
+            <Image x:Name="SofIcon" AbsoluteLayout.LayoutBounds="0.5,0.2,0.3,0.3" AbsoluteLayout.LayoutFlags="All" ></Image>
+            <StackLayout Orientation="Vertical" AbsoluteLayout.LayoutBounds="0.5,0.45,0.3,0.2" AbsoluteLayout.LayoutFlags="All">
+                <Label Text="Choose the type of the working days..." HorizontalTextAlignment="Center"  FontAttributes="Bold" FontSize="18" TextColor="{StaticResource BlueColor}"/>
+
+            </StackLayout>
+
+            <StackLayout  AbsoluteLayout.LayoutBounds="0,0.6,1,0.1" Padding="8,2,0,0" AbsoluteLayout.LayoutFlags="All" Margin="20,5,20,0" VerticalOptions="Center" >
+
+
+                <Picker FontAttributes="Bold" TitleColor="{StaticResource BlueColor}" x:Name="DaysTypePicker" SelectedIndexChanged="DaysTypePicker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Every Day</x:String>
+                        <x:String>Specific Days</x:String>
+                    </Picker.Items>
+
+                </Picker>
+            </StackLayout>
+
+
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

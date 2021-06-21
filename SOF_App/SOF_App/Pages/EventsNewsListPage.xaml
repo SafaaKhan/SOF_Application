@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.EventsNewsListPage">
+    <ContentPage.Content>
+      
+        <ListView Margin="5" x:Name="LVEventN" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Text="{Binding PublisherName }" TextColor="Black" FontSize="Body" FontAttributes="Italic"/>
+                            <Label   Grid.Row="1" Text="{Binding Title }" TextColor="Orange" FontSize="Title" />
+                            <Image Grid.Row="2" Source="{Binding FullPathImage}" HeightRequest="300" WidthRequest="250" />
+                            <Label BackgroundColor="{StaticResource LightGray}" AbsoluteLayout.LayoutBounds="0,0.6,1,0.1" Grid.Row="3" Text="{Binding Information}" TextColor="#737373" FontSize="16" FontAttributes="Bold"></Label>
+                            <StackLayout BackgroundColor="Orange" x:Name="CustomToolBarItem" Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="10000" Margin="0,0,0,4" Grid.Row="5">
+                                <Label  Text="             " TextColor="Orange" FontSize="8" FontAttributes="Bold"/>
+
+                            </StackLayout>
+                        </Grid>
+                                <!--  <StackLayout Orientation="Vertical" Margin="5,5,5,5">
+                            <Label Text="{Binding PublisherName }" TextColor="Black" FontSize="16" />
+                            <Label Text="{Binding Title }" TextColor="Orange" FontSize="14" />
+                            <Image Source="{Binding FullPathImage}" HeightRequest="300" WidthRequest="400" />
+                            <Label Text="{Binding Information}" TextColor="#737373" FontSize="14"></Label>
+                        </StackLayout>-->
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+       
+
+    </ContentPage.Content>
+</ContentPage>

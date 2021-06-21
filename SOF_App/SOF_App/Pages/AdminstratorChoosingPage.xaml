@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.AdminstratorChoosingPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="LOGOUT" x:Name="TLBLogout" Clicked="TLBLogout_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <Image x:Name="SofIcon"  Aspect="Fill" AbsoluteLayout.LayoutBounds="0,0,1,0.4" AbsoluteLayout.LayoutFlags="All" />
+            <Grid AbsoluteLayout.LayoutBounds="0,0.9,1,0.5" AbsoluteLayout.LayoutFlags="All" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout  Grid.Row="0" Grid.Column="0" Margin="50,50,0,0"  Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout VerticalOptions="Center" Orientation="Vertical">
+                        <Image x:Name="AppointmentIcon"/>
+                        <Label x:Name="AppointmentLbl" Text="Appointments" TextColor="{StaticResource BlueColor}" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="Micro"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="AppointmentTap" Tapped="AppointmentTap_Tapped" NumberOfTapsRequired="1" />
+
+
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                 <!--   <StackLayout Orientation="Vertical">
+                        <Picker  TitleColor="{StaticResource BlueColor}" x:Name="appointmentPicker"   SelectedIndexChanged="appointmentPicker_SelectedIndexChanged" FontAttributes="Bold" TextColor="{StaticResource BlueColor}" >
+                            <Picker.Items >
+                                <x:String>Insert working Hours</x:String >
+                                <x:String>Appointment Checking</x:String>
+
+                            </Picker.Items>
+                        </Picker>
+                        <Picker Title="Choose the type of the appointment duration: " TextColor="{StaticResource BlueColor}" x:Name="DatetypePicker" SelectedIndexChanged="DatetypePicker_SelectedIndexChanged" IsVisible="False">
+                            <Picker.Items>
+                                <x:String>The whole semester</x:String>
+                                <x:String>For specific dates</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>-->
+                    
+                </StackLayout>
+
+                <StackLayout Grid.Row="0" Grid.Column="2" Margin="0,50,0,0"  Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout VerticalOptions="Center">
+                        <Image x:Name="TransactionsIcon"/>
+                        <Label Text="Transactions" TextColor="{StaticResource BlueColor}" FontAttributes="Bold"  HorizontalTextAlignment="Center" FontSize="Micro"/>
+                    </StackLayout>
+
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TransactionsTap" NumberOfTapsRequired="1" Tapped="TransactionsTap_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+
+                </StackLayout >
+
+                <Image Grid.Row="0" Grid.Column="1" x:Name="LineVIcon" Grid.RowSpan="3"/>
+                <Image Grid.Row="1" Grid.Column="0" x:Name="LineHIcon" Grid.ColumnSpan="3"/>
+                <!--  <StackLayout Grid.Row="2" Grid.Column="0" Margin="55,-30,0,0" VerticalOptions="Center">
+                    <Image x:Name="StudentIcon"/>
+                    <Label Text="New Student" TextColor="{StaticResource BlueColor}" HorizontalTextAlignment="Center" FontSize="Micro"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="NewStudentTap" NumberOfTapsRequired="1" Tapped="NewStudentTap_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="2" Margin="0,-30,40,0" VerticalOptions="Center">
+                    <Image x:Name="InfoIcon"/>
+                    <Label Text="Info" TextColor="{StaticResource BlueColor}" HorizontalTextAlignment="Center" FontSize="Micro"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="InfoTap" NumberOfTapsRequired="1" Tapped="InfoTap_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>-->
+
+            </Grid>
+
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

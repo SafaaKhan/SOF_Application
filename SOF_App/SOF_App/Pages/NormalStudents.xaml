@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.NormalStudents">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout BackgroundColor="#ECF3FB">
+                <Picker x:Name="pkGraduatedORContinuing" Title="Choose :" TitleColor="DarkBlue"
+                         SelectedIndexChanged="pkGraduatedORContinuing_SelectedIndexChanged" FontSize="14"  Margin="5,5,60,5" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Graduate Student</x:String>
+                            <x:String>Continuing Student</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <StackLayout IsVisible="False" x:Name="stkContinuing" Margin="5,5,5,5">
+                    <Label Text="Continuing Student" TextColor="DarkBlue" FontSize="Title" Margin="5,5,5,5" x:Name="lbContinuing"/>
+                    <Label Text="Enter ID" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your ID" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="EntIdC"/>
+                    <Label Text="Enter Email" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your Email" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="EntEmailC"/>
+                    <Label Text="Name" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your name " PlaceholderColor="Default" Margin="5,5,70,5" x:Name="EntNameC"/>
+                    <Label Text="Your Major" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your major " PlaceholderColor="Default" Margin="5,5,70,5" x:Name="MajorC" />
+                    <Picker x:Name="EntContinuingSt" Title="ContinuingStudent" TitleColor="Default"
+                         SelectedIndexChanged="CotinueOnPickerSelectedIndexChanged" FontSize="14" Margin="5,5,60,5" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Student Card( Instead of lose)</x:String>
+                                <x:String>Proof of student</x:String>
+                                <x:String>Other TransAction</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <StackLayout x:Name="stkOtherC" IsVisible="False">
+                        <Label Text="Type your Request here:"/>
+                        <Entry Placeholder=" " PlaceholderColor="Default" Margin="5,5,60,5" x:Name="EntcontinuosTransaction"/>
+                    </StackLayout>
+                    <!--here dialog box-->
+                    <Label Text="*you must first pay for the required service through your SIS and attach a copy of the payment receipt" TextColor="Red" FontSize="12"/>
+                    <!--here photo-->
+                    <!--<Button x:Name="Send" BackgroundColor="#ffffcc"  Text="Send" IsEnabled="False" Clicked="Send_Clicked" Margin="70,50,70,70"/>-->
+                </StackLayout>
+
+                <StackLayout x:Name="stkGraduate" Margin="5,5,5,5">
+
+                    <Label Text="Graduate Student" TextColor="DarkBlue" FontSize="Title" Margin="5,5,5,5" x:Name="lbGraduate"/>
+                    <Label Text="Enter ID" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your ID" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="EntIdG"/>
+                    <Label Text="Enter Email" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your Email" PlaceholderColor="Default" Margin="5,5,70,5" x:Name="EntEmailG"/>
+                    <Label Text="Name" TextColor="DarkBlue" FontSize="Subtitle" Margin="5,5,5,5"/>
+                    <Entry Placeholder=" write your name " PlaceholderColor="Default" Margin="5,5,70,5" x:Name="EntNameG" />
+                    <Picker x:Name="EntGraduateSt" Title="GraduateStudent" TitleColor="Default"
+                         SelectedIndexChanged="GraduateOnPickerSelectedIndexChanged" FontSize="14" Margin="5,5,60,5" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                
+                                <x:String>Proof of Graduate</x:String>
+                                <x:String>Other TransAction</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <StackLayout x:Name="stkOtherG" IsVisible="False">
+                        <Label Text="Type your Request here:"/>
+                        <Entry Placeholder=" " PlaceholderColor="Default" Margin="5,5,60,5" x:Name="EntGraduateTransaction"/>
+                    </StackLayout>
+
+                    <Label Text="*you must first pay for the required service through your SIS and attach a copy of the payment receipt" TextColor="Red" FontSize="12"/>
+                    <!--here photo-->
+
+                </StackLayout>
+                <Button x:Name="btnTakefile" Margin="60,5,60,5"   Text="Select File" Clicked="btnSelectFile_Clicked" BackgroundColor="#ffffcc" TextColor="DarkBlue" />
+
+                <Label x:Name="FileName"
+                                 FontSize="Subtitle" TextColor="Blue" Margin="5,5,5,5"/>
+                <Button x:Name="btnSend" BackgroundColor="#ffffcc"  Text="Send" IsEnabled="True" Clicked="Send_Clicked" Margin="70,50,70,70"/>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

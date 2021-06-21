@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.PostCSc">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="LOGOUT" x:Name="TLBLogout" Clicked="TLBLogout_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="60,60,60,60">
+            <Label HorizontalTextAlignment="Center" Text="Post the event and news" FontSize="Title" TextColor="Black" Margin="0,0,0,20"/>
+            <Label Text="Name of Publisher" FontSize="Body" FontAttributes="Bold" TextColor="{StaticResource GoldColor}"/>
+            <Entry  TextColor="Orange" x:Name="EntPublishName"/>
+            <Label Text="Title of the event"  FontSize="Body" FontAttributes="Bold" TextColor="{StaticResource GoldColor}" />
+            <Entry  TextColor="Orange" x:Name="EntTitle"/>
+            <Label Text="Information"  FontSize="Body" FontAttributes="Bold" TextColor="{StaticResource GoldColor}" />
+            <Entry  TextColor="Orange" x:Name="EntInfo"/>
+            <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="End">
+                <Image x:Name="EventImage" HeightRequest="80" WidthRequest="80"> </Image>
+                <Image x:Name="cameraIcon" HeightRequest="60" WidthRequest="60"></Image>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="Uploadfile" NumberOfTapsRequired="1" Tapped="Uploadfile_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <Button x:Name="PublishBtn" Text="Publish" Clicked="PublishBtn_Clicked" BackgroundColor="Orange" TextColor="Gray" Margin="200,20,200,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

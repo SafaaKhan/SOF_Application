@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+               xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="SOF_App.Pages.AdminPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Start Date"/>
+            <syncfusion:SfCalendar x:Name="calendar_1"  HeightRequest="200"/>
+            <Label Text="End Date"/>
+            <syncfusion:SfCalendar x:Name="calendar_2"  HeightRequest="200"/>
+            <Button Text="Set" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

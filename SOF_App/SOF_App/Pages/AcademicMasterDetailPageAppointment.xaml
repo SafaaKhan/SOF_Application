@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOF_App.Pages.AcademicMasterDetailPageAppointment"
+             xmlns:pages="clr-namespace:SOF_App.Pages">
+    <MasterDetailPage.Master>
+        <ContentPage Title=" AcademicMasterDetailPageAppointmentMaster">
+            <StackLayout BackgroundColor="#eeeeee">
+                <Grid>
+                    <BoxView BackgroundColor="#444444" HeightRequest="150"/>
+                    <Label Text="Welcome to the Staff Section" TextColor="#777777" FontSize="Medium" Margin="15,60,0,10"/>
+
+
+                </Grid>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="HomeIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Home" TextColor="#444444" />
+             
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="HomeTap" NumberOfTapsRequired="1" Tapped="HomeTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="ServiceIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Your Services" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ServicesTap" NumberOfTapsRequired="1" Tapped="ServicesTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="AppointmentIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Appointment Checking" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="checkingTap" NumberOfTapsRequired="1" Tapped="checkingTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="InsertIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label x:Name="WorkingHoursLbl" Text="Insert Appointmets For Working Hours" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="WorkingHoursTap" NumberOfTapsRequired="1" Tapped="WorkingHoursTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0" IsVisible="False" x:Name="specific_serviceStck">
+                    <Image x:Name="Insert2Icon" HeightRequest="30" WidthRequest="30"/>
+                    <Label x:Name="SpecificServicesLbl" Text="Insert Appointmets For Specific Services" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="SpecificServicesTap" NumberOfTapsRequired="1" Tapped="SpecificServicesTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="CheckListIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Checking Transactions" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TransactionTap" NumberOfTapsRequired="1" Tapped="TransactionTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="CheckingregistrationofnewstudentSTCK" Orientation="Horizontal" Spacing="20" Margin="20,20,0,0" IsVisible="True">
+                    <Image x:Name="CheckingregistrationofnewstudentIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Checking registration of new student" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="CheckingregistrationofnewstudentTap" NumberOfTapsRequired="1" Tapped="Checkingregistrationofnewstudent"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="TracingIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Tracking" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TracingTap" NumberOfTapsRequired="1" Tapped="TracingTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0" x:Name="postStk" IsVisible="true">
+                    <Image x:Name="PostingIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Post Event and News" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="PostingTap" NumberOfTapsRequired="1" Tapped="PostingTap_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="20" Margin="20,20,0,0">
+                    <Image x:Name="LogoutIcon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Logout" TextColor="#444444" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="LogoutTap" NumberOfTapsRequired="1" Tapped="Logout_Tapped"/>
+
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:HomePage>
+
+                </pages:HomePage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
